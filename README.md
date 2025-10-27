@@ -14,7 +14,7 @@ How to use if statements to check conditions
 Tools used
 HTML
 JavaScript
-Web browser console for testing
+Web browser console for testing (Google Chrome is my preferred browser for testing in the console.)
 
 How to run the project
 1 Open index.html in a web browser
