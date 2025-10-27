@@ -101,3 +101,61 @@ function checkEligibility(age, isEmployed) {
 console.log(checkEligibility(25, true));  // Eligible.
  console.log(checkEligibility(25, false)); // Conditionally eligible.
 console.log(checkEligibility(18, true));  // Not eligible.
+
+//task4 
+document.getElementById('btnDiscount').addEventListener('click', () => {
+    const price = document.getElementById('price2').value;
+    const quantity = document.getElementById('qty2').value;
+    const taxRate = document.getElementById('tax2').value;
+    const discount = document.getElementById('discount').value;
+
+    const result = calculateTotalCostWithDiscount(price, quantity, taxRate, discount);
+    document.getElementById('result4').textContent = result;
+});
+function calculateTotalCostWithDiscount(price, quantity, taxRate, discount = 0) {
+
+    if (isNaN(price)) {
+        return "Invalid input.";
+    }
+
+    if (isNaN(quantity)) {
+        return "Invalid input.";
+    }
+
+    if (isNaN(taxRate)) {
+        return "Invalid input.";
+    }
+
+    if (isNaN(discount)) {
+        return "Invalid input.";
+    }
+ //Number method mdn references https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
+    price = Number(price);
+    quantity = Number(quantity);
+    taxRate = Number(taxRate);
+    discount = Number(discount);
+
+    let total = (price * quantity) - discount;
+
+    if (total < 0) {
+        total = 0;
+    }
+
+    return total * (1 + taxRate);
+}
+// mdn references https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+// event listener button click
+// mdn references https://developer.mozilla.org/en-US/docs/Web/API/Element/addEventListener
+
+document.getElementById('btnDiscount').addEventListener('click', () => {
+    const price = document.getElementById('price2').value;
+    const quantity = document.getElementById('qty2').value;
+    
+    const taxRate = document.getElementById('tax2').value;
+    const discount = document.getElementById('discount').value;
+
+    const result = calculateTotalCostWithDiscount(price, quantity, taxRate, discount);
+    document.getElementById('result4').textContent = result;
+});
+
+
