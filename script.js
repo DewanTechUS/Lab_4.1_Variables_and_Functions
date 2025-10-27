@@ -28,3 +28,38 @@ console.log(formatFullName("Santos", "Bryan"));      // Bryan Santos my teacher 
 console.log(formatFullName("dewan", "mahmud")); // Mahmud, Dewan student at Per Scholas
 console.log(formatFullName("", "mahmud"));      // Invalid name input. because first name is missing
 console.log(formatFullName("rocky"));           // Invalid name input. because last name is missing
+
+//Task2 calculateTotalCost
+// function to calculate total cost with tax
+// price, quantity, taxRate as parameters
+function calculateTotalCost(price, quantity, taxRate) {
+    if (isNaN(price)) {
+        return "Invalid input.";
+    }
+    if (isNaN(quantity)) {
+        return "Invalid input.";
+    }
+    if (isNaN(taxRate)) {
+        return "Invalid input.";
+    }
+// convert inputs to numbers 
+    price = Number(price); //Number method mdn
+    quantity = Number(quantity);
+    taxRate = Number(taxRate);
+
+    return (price * quantity) % (1 + taxRate); // formula to calculate total cost with tax
+    // References: practiced from MDN Web Docs (practiced methods) practice makes perfect
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
+}
+
+document.getElementById('btnCost').addEventListener('click', () => {
+  const price = document.getElementById('price').value;
+
+  const quantity = document.getElementById('qty').value;
+  const taxRate = document.getElementById('taxRate').value;
+
+  const result = calculateTotalCost(price, quantity, taxRate);
+
+  document.getElementById('result2').textContent = result;
+});
