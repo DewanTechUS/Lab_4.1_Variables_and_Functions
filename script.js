@@ -65,8 +65,8 @@ document.getElementById('btnCost').addEventListener('click', () => {
 // referances: nested if statements from w3schools
 // https://www.w3schools.com/js/js_if_else.asp
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-
-// age and isEmployed as parameters
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+// age and isEmployed as parameters 
 function checkEligibility(age, isEmployed) {
 
     age = Number(age);
