@@ -54,12 +54,34 @@ function calculateTotalCost(price, quantity, taxRate) {
 }
 
 document.getElementById('btnCost').addEventListener('click', () => {
-  const price = document.getElementById('price').value;
-
-  const quantity = document.getElementById('qty').value;
-  const taxRate = document.getElementById('taxRate').value;
-
-  const result = calculateTotalCost(price, quantity, taxRate);
-
-  document.getElementById('result2').textContent = result;
+  const price = document.getElementById('price').value; // get price input value
+  const quantity = document.getElementById('qty').value; // get quantity input value
+  const taxRate = document.getElementById('taxRate').value; // get tax rate input value
+  const result = calculateTotalCost(price, quantity, taxRate); // call calculateTotalCost function
+  document.getElementById('result2').textContent = result; // display result in result2 paragraph
 });
+// task 3 checkEligibility
+// function to check eligibility based on age and employment status
+// referances: nested if statements from w3schools
+// https://www.w3schools.com/js/js_if_else.asp
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+// age and isEmployed as parameters
+function checkEligibility(age, isEmployed) {
+
+    age = Number(age);
+
+    if (age > 18) {
+
+        if (isEmployed === true) {
+            return "Eligible.";
+        }
+
+        if (isEmployed === false) {
+            return "Conditionally eligible.";
+        }
+
+    }
+
+    return "Not eligible.";
+}
