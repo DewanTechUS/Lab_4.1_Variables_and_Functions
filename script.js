@@ -47,7 +47,7 @@ function calculateTotalCost(price, quantity, taxRate) {
     quantity = Number(quantity);
     taxRate = Number(taxRate);
 
-    return (price * quantity) % (1 + taxRate); // formula to calculate total cost with tax
+    return (price * quantity) * (1 + taxRate); // formula to calculate total cost with tax
     // References: practiced from MDN Web Docs (practiced methods) practice makes perfect
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number
