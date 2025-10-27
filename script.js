@@ -67,6 +67,7 @@ document.getElementById('btnCost').addEventListener('click', () => {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
 // age and isEmployed as parameters 
+
 function checkEligibility(age, isEmployed) {
 
     age = Number(age);
@@ -85,3 +86,18 @@ function checkEligibility(age, isEmployed) {
 
     return "Not eligible.";
 }
+// event listener button click
+   document.getElementById('btnElig').addEventListener('click', () => {
+    const age = document.getElementById('age').value;
+   
+    const employedText = document.getElementById('job').value.toLowerCase();
+   
+    const isEmployed = employedText === "true";
+
+    const result = checkEligibility(age, isEmployed);
+    document.getElementById('result3').textContent = result;
+});
+// we can comment out the below console logs to see the output in the browser console individually
+console.log(checkEligibility(25, true));  // Eligible.
+ console.log(checkEligibility(25, false)); // Conditionally eligible.
+console.log(checkEligibility(18, true));  // Not eligible.
