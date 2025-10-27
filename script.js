@@ -20,10 +20,10 @@ function formatFullName(firstName, lastName) {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLowerCase
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toUpperCase
 } 
-// we can comment out the below console logs to see the output in the browser console
+// we can comment out the below console logs to see the output in the browser console individually
 
 console.log(formatFullName("Trainor", "Tishana"));    // Tishana, Trainor my teacher at Per Scholas
-console.log(formatFullName("Santos", "Bryan"));      // Bryan Santos
+console.log(formatFullName("Santos", "Bryan"));      // Bryan Santos my teacher at Per Scholas
 
 console.log(formatFullName("dewan", "mahmud")); // Mahmud, Dewan student at Per Scholas
 console.log(formatFullName("", "mahmud"));      // Invalid name input. because first name is missing
