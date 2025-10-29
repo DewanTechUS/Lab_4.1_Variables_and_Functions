@@ -1,6 +1,12 @@
 // javaScript is wild wild west no rules but best practices.
 //mdn and w3schools web docs is my go to reference for best practices and methods
 //Task1 formatFullName
+document.getElementById('btnName').addEventListener('click', () => {
+  const f = document.getElementById('firstName').value;
+  const l = document.getElementById('lastName').value;
+  const result = formatFullName(f, l);
+  document.getElementById('result1').textContent = result;
+});
 function formatFullName(firstName, lastName) {
 
     if (!firstName) {
@@ -143,19 +149,11 @@ function calculateTotalCostWithDiscount(price, quantity, taxRate, discount = 0) 
 
     return total * (1 + taxRate);
 }
+
 // mdn references https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
-// event listener button click
 // mdn references https://developer.mozilla.org/en-US/docs/Web/API/Element/addEventListener
-
-document.getElementById('btnDiscount').addEventListener('click', () => {
-    const price = document.getElementById('price2').value;
-    const quantity = document.getElementById('qty2').value;
-    
-    const taxRate = document.getElementById('tax2').value;
-    const discount = document.getElementById('discount').value;
-
-    const result = calculateTotalCostWithDiscount(price, quantity, taxRate, discount);
-    document.getElementById('result4').textContent = result;
-});
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
